@@ -1,0 +1,93 @@
+.login-container {
+  display: flex;
+  flex-direction: row;
+
+  .MuiInputBase-root {
+    &.MuiOutlinedInput-root {
+      &.Mui-focused {
+        .MuiOutlinedInput-notchedOutline {
+          border-color: #7f265b;
+        }
+        .MuiInputBase-input {
+          color: #7f265b;
+        }
+      }
+    }
+  }
+  .MuiInputLabel-root {
+    color: #7f265b !important;
+  }
+  .image {
+    width: 50%;
+    display: none; 
+
+    @media (min-width: 768px) {
+      // Show image on medium and larger devices
+      display: block;
+      height: 100vh;
+      object-fit: cover; // Maintain aspect ratio
+    }
+  }
+
+  .background {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url("../assets/backgroundLoginForm.svg");
+    background-size: cover;
+    background-position: center;
+
+    #loginForm {
+      margin-top: 15%;
+      margin-left: 15%;
+
+      img.cross-icon {
+        width: 3rem; // Cross SVG width
+      }
+
+      .title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 4px;
+      }
+
+      .subtitle {
+        margin-top: 4px; // Space for subtitle
+      }
+
+      .fields {
+        width: 80%;
+        margin-top: 4px;
+
+        .MuiTextField-root {
+          margin-top: 12px; // Space between text fields
+        }
+      }
+
+      .forgot-password {
+        width: 100%;
+        margin-top: 2px;
+        text-align: end;
+        color: #7f265b;
+      }
+
+      .login-button {
+        margin-top: 16px;
+        padding: 12px;
+        background-color: #7f265b;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+      }
+
+      .register {
+        margin-top: 10vh;
+        text-align: center;
+
+        .sign-up {
+          color: #7f265b;
+          margin-left: 8px; // Space between text
+        }
+      }
+    }
+  }
+}
